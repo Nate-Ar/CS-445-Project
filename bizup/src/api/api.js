@@ -27,3 +27,16 @@ export const addItemToCart = async (userId, productId, quantity) => {
     }
     return response.json();
 };
+
+// this could work for the login asusmming the user would login email and password
+export const login = async (email, password) => {
+    const response = await fetch(`${API_BASE_URL}/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+    });
+    if (!response.ok) {
+        throw new Error("Invalid email or password");
+    }
+    return response.json();
+};

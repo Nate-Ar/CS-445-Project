@@ -29,8 +29,6 @@ function Homepage() {
                     </div>
                 </div>
             </nav>
-
-            {/* Category Buttons Section (aligned horizontally next to each other) */}
             <div className="d-flex justify-content-start gap-3 mt-5 pt-5">
                 <button className="btn btn-secondary">All</button>
                 <button className="btn btn-secondary">Discover</button>
@@ -38,11 +36,11 @@ function Homepage() {
                 <button className="btn btn-secondary">Trending</button>
                 <button className="btn btn-secondary">Recently Viewed</button>
             </div>
-
-            {/* Main Content Section */}
             <div className="mt-5 pt-5">
-                <h1>Welcome to BIXUP</h1>
-                {/* Add your main content here */}
+                <h1>You should see products here</h1>
+                <Link to="/product" className="btn btn-light">
+                    See Product Page
+                </Link>
             </div>
         </div>
     );

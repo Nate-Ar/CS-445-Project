@@ -7,7 +7,7 @@ function AccountPage() {
         <div className="container-fluid">
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="/">BIXUP</a>
+                    <a className="navbar-brand" href="/homepage">BIXUP</a>
                     <div className="d-flex w-50">
                         <input
                             className="form-control me-2"
@@ -40,6 +40,15 @@ function AccountPage() {
                         Edit Account
                     </Link>
                     <button className="btn btn-danger">Delete Account</button>
+                </div>
+
+                <div className="mt-5">
+                    <Link to="/orders" className="btn btn-primary me-2">
+                        Your Orders
+                    </Link>
+                    <Link to="/contact" className="btn btn-primary me-2">
+                        Support
+                    </Link>
                 </div>
             </div>
         </div>
