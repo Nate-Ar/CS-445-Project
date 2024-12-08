@@ -36,7 +36,7 @@ function AccountPage() {
 
                 {/*make this shit work still */}
                 <div className="mt-4">
-                    <Link to="/edit-account" className="btn btn-primary me-2">
+                    <Link to="/accountedit" className="btn btn-primary me-2">
                         Edit Account
                     </Link>
                     <button className="btn btn-danger">Delete Account</button>
