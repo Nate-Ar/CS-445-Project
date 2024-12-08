@@ -29,7 +29,7 @@ function Homepage() {
                     </div>
                 </div>
             </nav>
-            <div className="d-flex justify-content-start gap-3 mt-5 pt-5">
+            <div className="d-flex justify-content-start gap-3 mt-3 pt-5">
                 <button className="btn btn-secondary">All</button>
                 <button className="btn btn-secondary">Discover</button>
                 <button className="btn btn-secondary">Popular</button>

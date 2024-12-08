@@ -6,7 +6,7 @@ const SignUpPage = () => {
             <div className="container-fluid">
                 <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
                     <div className="container-fluid">
-                        <a className="navbar-brand" href="#">BIXUP</a>
+                        <a className="navbar-brand" href="/">BIXUP</a>
                     </div>
                 </nav>
             </div>
