@@ -27,6 +27,7 @@ function App() {
                 <Route path="/orders" element={<YourOrdersPage />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/product" element={<ProductPage />} />
+                {/*login page should be what users see at first*/}
                 <Route path="/" element={<LoginPage />} />
                 <Route path="/homepage" element={<Homepage />} />
                 <Route path="/account" element={<AccountPage />} />
