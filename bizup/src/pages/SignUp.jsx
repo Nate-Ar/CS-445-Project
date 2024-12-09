@@ -15,7 +15,7 @@ const SignUpPage = () => {
     const handleCloseModal = () => {
         setShowModal(false);
         // Navigate to the login page after closing the modal
-        navigate("/");
+        navigate("/homepage");
     };
 
     return (
