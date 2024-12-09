@@ -2,6 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const OrdersPage = () => {
+    // Mock order data
+    const mockOrder = {
+        orderNumber: "ORD123456",
+        productName: "3D-Printed Miniature Figure",
+        orderDate: "2024-11-15",
+        price: "$30.00",
+        status: "Shipped"
+    };
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
@@ -22,7 +31,22 @@ const OrdersPage = () => {
                 <h1>Your Orders</h1>
 
                 <div className="list-group mt-4">
-                    {/* Placeholder for orders - Dynamic content will go here */}
+                    {/* Mock Order */}
+                    <div className="list-group-item list-group-item-action">
+                        <h5 className="mb-1">{mockOrder.productName}</h5>
+                        <p className="mb-1">
+                            <strong>Order Number:</strong> {mockOrder.orderNumber}
+                        </p>
+                        <p className="mb-1">
+                            <strong>Order Date:</strong> {mockOrder.orderDate}
+                        </p>
+                        <p className="mb-1">
+                            <strong>Price:</strong> {mockOrder.price}
+                        </p>
+                        <p className="mb-1">
+                            <strong>Status:</strong> {mockOrder.status}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -72,8 +72,11 @@ const LoginPage = () => {
                             />
                         </div>
                         {error && <div className="alert alert-danger">{error}</div>}
-                        <button type="submit" className="btn btn-primary w-100">Login</button>
+
                     </form>
+                    <Link to="/homepage" className="btn btn-primary mt-3 w-100">
+                        Sign IN
+                    </Link>
                     <Link to="/signup" className="btn btn-primary mt-3 w-100">
                         Sign Up
                     </Link>

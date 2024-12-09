@@ -1,20 +1,21 @@
-import React, { useState, useEffect } from "react";
-import {Link} from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 
-const CartPage = ({ userId }) => {
-    const [cartItems, setCartItems] = useState([]);
+function ShoppingCartPage() {
+    // Mock data for cart items
+    const [cartItems, setCartItems] = useState([
+        {
+            id: 1,
+            name: "3D-Printed Miniature Figure",
+            price: 30,
+            quantity: 1,
+            image_url: "https://images.cults3d.com/4UvLxSvPoNqpEQb9eQieV3b2PtY=/516x516/filters:no_upscale():format(webp)/https://fbi.cults3d.com/uploaders/25972051/illustration-file/f525a06d-e815-440a-8fc9-9d7b374f443d/IMG_0983.jpeg",
+        },
+    ]);
 
-    useEffect(() => {
-        fetch(`/api/cart/${userId}`)
-            .then((response) => response.json())
-            .then((data) => setCartItems(data))
-            .catch((err) => console.error("Failed to fetch cart items:", err));
-    }, [userId]);
-
+    // Placeholder for remove functionality
     const handleRemove = (itemId) => {
-        fetch(`/api/cart/${itemId}`, { method: "DELETE" })
-            .then(() => setCartItems(cartItems.filter((item) => item.id !== itemId)))
-            .catch((err) => console.error("Failed to remove item:", err));
+        setCartItems(cartItems.filter((item) => item.id !== itemId));
     };
 
     return (
@@ -78,6 +79,6 @@ const CartPage = ({ userId }) => {
             </div>
         </div>
     );
-};
+}
 
-export default CartPage;
+export default ShoppingCartPage;
