@@ -13,9 +13,17 @@ function ShoppingCartPage() {
         },
     ]);
 
+    // State for managing the modal visibility
+    const [showModal, setShowModal] = useState(false);
+
     // Placeholder for remove functionality
     const handleRemove = (itemId) => {
         setCartItems(cartItems.filter((item) => item.id !== itemId));
+    };
+
+    // Handle checkout action
+    const handleCheckout = () => {
+        setShowModal(true); // Show modal after clicking checkout
     };
 
     return (
@@ -72,11 +80,36 @@ function ShoppingCartPage() {
                         ))}
                         <div className="d-flex justify-content-between align-items-center mt-4">
                             <h3>Total: ${cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2)}</h3>
-                            <button className="btn btn-primary">Proceed to Checkout</button>
+                            <button className="btn btn-primary" onClick={handleCheckout}>
+                                Proceed to Checkout
+                            </button>
                         </div>
                     </div>
                 )}
             </div>
+
+            {/* Modal for successful checkout */}
+            {showModal && (
+                <div className="modal fade show" style={{ display: 'block' }} aria-modal="true" role="dialog">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h5 className="modal-title">Order Confirmation</h5>
+                                <button type="button" className="btn-close" onClick={() => setShowModal(false)}></button>
+                            </div>
+                            <div className="modal-body">
+                                <p>Your products have been successfully purchased!</p>
+                            </div>
+                            <div className="modal-footer">
+                                <button type="button" className="btn btn-secondary" onClick={() => setShowModal(false)}>
+                                    Close
+                                </button>
+                                <Link to="/orders" className="btn btn-primary">View Orders</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
