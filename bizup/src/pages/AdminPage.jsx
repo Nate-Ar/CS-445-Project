@@ -51,7 +51,7 @@ const AdminPage = () => {
             {/* Navbar */}
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">BIXUP</a>
+                    <a className="navbar-brand" href="#">BIZUP</a>
                     <div className="ms-auto">
                         <a href="/account" className="btn btn-light">
                             Account
